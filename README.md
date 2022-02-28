@@ -13,7 +13,7 @@ When the provider changes, the pact verification task runs as part the provider'
 
 To ensure that a verification is also run whenever a pact changes, we create a webhook in Pactflow that triggers a provider build, and passes in the URL of the changed pact. Ideally, this would be a completely separate build from your normal provider pipeline, and it should just verify the changed pact.
 
-## Features
+## Features.
 
 * In [.github/workflows/build.yml](.github/workflows/build.yml)
     * Our PACT_BROKER_TOKEN environment variable is set from a Github Secret. This is a read/write token. For normal development use, you would use a read only token, as you would not be publishing verification results from your local machine.
